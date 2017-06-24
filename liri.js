@@ -59,27 +59,8 @@ var appLiri = {
       }
     });
   },
-  "do-what-it-says": function() {
-    fs.readFile('random.txt', 'utf8', function(err, data) {
-      if(err) throw err;
-      console.log(data.toString());
+  
 
-      var cmds = data.toString().split(',');
-
-      app[cmds[0].trim()](cmds[1].trim());
-    });
-  },
-  logData: function(data) {
-    fs.appendFile('log.txt', JSON.stringify(data, null, 2) + '\n====================================================================================', function(err) {
-      if(err) {
-        console.log(err);
-      }
-    });
-  }
-};
-
-
-app[process.argv[2]](process.argv[3]);
 
 
 
