@@ -28,7 +28,7 @@ var appLiri = {
 
         app.logData(data);
       } else {
-        console.log('No song data found.');
+        console.log('No dice on your song.');
       }
 
 
